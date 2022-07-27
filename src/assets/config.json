@@ -1,52 +1,61 @@
 {
-    "rows": [
+    "row_1": [
         {
             "cols": [
                 {  
                     "sm": 3,
                     "lg": 3,
                     "component": "patient-data",
-                    "datans": "tag_name",
+                    "datans": "Nivel de RCV",
                     "config": {
-                       
-                    }
-                },
-                {
-                    "sm": 3,
-                    "lg": 3,
-                    "component": "patient-data",
-                    "datans": "tag_name",
-                    "config": {
-                       
-                    }
-                },
-                {
-                    "sm": 3,
-                    "lg": 3,
-                    "component": "patient-data",
-                    "datans": "tag_name",
-                    "config": {
-                       
-                    }
-                },
-                {
-                    "sm": 3,
-                    "lg": 3,
-                    "component": "patient-data",
-                    "datans": "tag_name",
-                    "config": {
-                       
-                    }
-                },
-                {
-                    "sm": 3,
-                    "lg": 3,
-                    "component": "patient-data",
-                    "datans": "tag_name",
-                    "config": {
-                       
+                        "tag_name" : "Nivel de RCV"
                     }
                 }
+                
+            ]
+        }
+    ],
+
+    "row_2": [
+        { 
+            "cols": [
+                {  
+                    "sm": 3,
+                    "lg": 3,
+                    "component": "patient-data",
+                    "datans": "SCORE",
+                    "config": {
+                       "tag_name" : "SCORE"
+                    }
+                },
+                {
+                    "sm": 3,
+                    "lg": 3,
+                    "component": "patient-data",
+                    "datans": "Heading",
+                    "config": {
+                        "tag_name" : "Heading"
+                    }
+                },
+                {
+                    "sm": 3,
+                    "lg": 3,
+                    "component": "patient-data",
+                    "datans": "Ultimao valor LDL",
+                    "config": {
+                        "tag_name" : "Ultimao valor LDL"
+                    }
+                },
+                {
+                    "sm": 3,
+                    "lg": 3,
+                    "component": "patient-data",
+                    "datans": "Ultimao valor LDL",
+                    "config": {
+                        "tag_name" : "Ultimao valor LDL"
+                    }
+                }
+               
             ]
         }
     ]
