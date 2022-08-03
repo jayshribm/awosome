@@ -1,12 +1,13 @@
 {
-    "row_1": [
+    "default_patient_key" : "1",
+    "row1": [
         {
             "cols": [
                 {  
                     "sm": 3,
                     "lg": 3,
                     "component": "patient-data",
-                    "datans": "Nivel de RCV",
+                    "datans": "name1",
                     "config": {
                         "tag_name" : "Nivel de RCV"
                     }
@@ -16,14 +17,14 @@
         }
     ],
 
-    "row_2": [
+    "row2": [
         { 
             "cols": [
                 {  
                     "sm": 3,
                     "lg": 3,
                     "component": "patient-data",
-                    "datans": "SCORE",
+                    "datans": "name1",
                     "config": {
                        "tag_name" : "SCORE"
                     }
@@ -32,7 +33,7 @@
                     "sm": 3,
                     "lg": 3,
                     "component": "patient-data",
-                    "datans": "Heading",
+                    "datans": "name2",
                     "config": {
                         "tag_name" : "Heading"
                     }
@@ -41,7 +42,7 @@
                     "sm": 3,
                     "lg": 3,
                     "component": "patient-data",
-                    "datans": "Ultimao valor LDL",
+                    "datans": "name3",
                     "config": {
                         "tag_name" : "Ultimao valor LDL"
                     }
@@ -50,7 +51,7 @@
                     "sm": 3,
                     "lg": 3,
                     "component": "patient-data",
-                    "datans": "Ultimao valor LDL",
+                    "datans": "name4",
                     "config": {
                         "tag_name" : "Ultimao valor LDL"
                     }

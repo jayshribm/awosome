@@ -2,24 +2,29 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 app = Flask(__name__)
 app.config.from_object(__name__)
-CORS(app, resources={r'/*': {'origins': '*'}})
+CORS(app, resources={r'/patient/*': {'origins': '*'}})
 
-@app.route('/<int:id>', methods = ['GET'])
+
+@app.route('/patient/<int:id>', methods=['GET'])
 def send_data(id):
 
-    data = {
-        "Nivel de RCV": "Mutio Alto",
-        "SCORE" : 10,
-        "Heading" : "Body",
-        "Ultimao valor LDL" : 45
-    }
-    return data
-  
+    data = {"patient_data":
+                [
+                    {
+                        "Nivel de RCV": "Mutio Alto",
+                        "SCORE": 10,
+                        "Heading": "Body",
+                        "Ultimao valor LDL": 45
+
+                    }
+                ]
+            }
+
+    return jsonify(data['patient_data'])
+
 
 if __name__ == '__main__':
-    app.run(debug = True)
-
-
+    app.run(debug=True)
 
 
 # from email import header
@@ -47,7 +52,7 @@ if __name__ == '__main__':
 #         'data': {
 #             'message': "Alive!"
 #         }
-        
+
 #     })
 
 

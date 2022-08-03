@@ -1,3 +1,14 @@
 {
-    "tag_name" : "Score"
+    "row1":{
+        "name1" : "Nivel de RCV" 
+        
+    },
+    "row2":{
+        "name1" : "SCORE",
+        "name2" : "Heading",
+        "name3" : "Ultimao valor LDL",
+        "name4" : "Ultimao valor LDL"
+    }
+    
+    
 }

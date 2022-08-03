@@ -2,13 +2,13 @@
   <v-app>
     <v-main>
       <div class="col-lg-6">
-          <template v-for="(row, rindex) in $config.row_1">
+          <template v-for="(row, rindex) in $config.row1">
             <v-row :key="rindex">
                 <template v-for="(col, cindex) in row.cols"> 
                   <v-col class="wrapper" :key="cindex" :cols="col.cols" :sm="col.sm" :lg="col.lg">
                     <component
                         :is="col.component"
-                        :data="getResult[col.datans]"
+                        :data="result[$bundle.row1[col.datans]]"
                         :config="col.config"
                     > 
                     </component>
@@ -17,13 +17,13 @@
             </v-row>
           </template>
           
-          <template v-for="(row, rindex) in $config.row_2">
+          <template v-for="(row, rindex) in $config.row2">
             <v-row :key="rindex">
                 <template v-for="(col, cindex) in row.cols"> 
                   <v-col class="wrapper" :key="cindex" :cols="col.cols" :sm="col.sm" :lg="col.lg">
                     <component
                         :is="col.component"
-                        :data="getResult[col.datans]"
+                        :data="result[$bundle.row2[col.datans]]"
                         :config="col.config"
                     > 
                     </component>
@@ -47,20 +47,19 @@ export default {
   },
   data() {
     return {
-      getResult: null,
+      result: null,
       id:1
     }
   },
   mounted(){
-    this.getAllData();
+    this.tinyData();
   },
   methods:{
-    async getAllData(){
+    async tinyData(){
       try{
-        const res = await fetch(`http://127.0.0.1:5000/${this.id}`);
-        this.getResult = await res.json();
-        console.log(this.getResult)
-        
+        const res = await fetch(`http://127.0.0.1:5000/patient/${this.id}`);
+        this.result = await res.json();
+        this.result = this.result[0] 
       }
       catch(err){
           console.log("error", err)
